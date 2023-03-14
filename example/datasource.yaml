@@ -1,0 +1,10 @@
+apiVersion: oslo.sre.macpaw.dev/v1alpha1
+kind: DataSource
+metadata:
+  name: prom
+  namespace: default
+spec:
+  description: Prometheus connection
+  type: Prometheus
+  connectionDetails:
+    url: http://prom-kube-prometheus-stack-prometheus.prometheus.svc:9090
